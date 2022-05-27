@@ -1,0 +1,67 @@
+#!/bin/bash
+# A bash script that compiles the kernel
+# Author : me
+# Has a few options, none of which are necessary, but it's recommended to use at least -v and -n 
+PS4='LINENO:'
+# Defining colors for better visuals
+Red='\033[0;31m'          # Red
+Green='\033[0;32m'        # Green
+Purple='\033[0;35m'       # Purple
+NC='\033[0m'		  # End Color
+# Default options 
+VER='17.5'
+NAME='517-w3cl'
+JOBS=$(grep -c processor /proc/cpuinfo)
+echo number of cores: $(grep -c processor /proc/cpuinfo) 
+#The main function
+Run()
+{
+echo "Ver. $VER Version name: $NAME Jobs: $JOBS"
+echo -e "$Purple kernel builder v1 $NC"
+echo -e "$Purple Running with $JOBS jobs $NC"
+cd /home/twfl/kernelbuild/linux-5.$VER/
+pwd
+echo -e "$Purple starting build $NC"
+make -j$JOBS
+make modules -j$JOBS
+make modules_install
+echo -e "$Green finished compiling $NC"
+echo -e "$Purple installing new kernel $NC"
+cp -v arch/x86/boot/bzImage /boot/vmlinuz-linux$NAME
+cp /etc/mkinitcpio.d/linux.preset /etc/mkinitcpio.d/linux$NAME.preset
+cp System.map /boot/System.map-linux$NAME
+ln -sf /boot/System.map-linux$NAME+ /boot/System.map
+echo -e "$Purple making changes $NC"
+sed -i "s/-linux/-linux${NAME}/g" /etc/mkinitcpio.d/linux$NAME.preset
+mkinitcpio -p linux$NAME
+echo -e "$Green finished installing $NC"
+echo -e "$Purple regenerating grub config $NC"
+grub-mkconfig -o /boot/grub/grub.cfg
+echo -e "$Red Script Finished, new kernel ready $NC"
+}
+
+
+# Checks if the number (of jobs) is correct
+CheckInt()
+{
+re='^[0-9]+$'
+if ! [[ $JOBS =~ $re ]] ; then
+   echo -e "$Red error: Not a valid number $NC" >&2; exit 2 
+fi
+}
+
+
+# Get the options
+while getopts ":j:n:v:" option; do
+   case $option in
+      j) # Enter the number of jobs
+         JOBS=$OPTARG
+	 CheckInt;;
+      v) VER="$OPTARG";; # Enter the version Eg. 17.5
+      n) NAME="$OPTARG";; # Enter the name Eg. 175-w3cl 
+     \?) # Invalid option
+         echo -e "$Res Error: Invalid option $NC"
+         exit;;
+   esac
+done
+Run
