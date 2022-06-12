@@ -47,3 +47,52 @@ Sun Jun 12 12:40:54 CEST 2022 started the kitty terminal window
 [163 12:40:54.469118] Ignoring unknown config key: open_url_modifiers
 [163 12:40:54.469576] Ignoring unknown config key: rectangle_select_modifiers
 [163 12:40:54.469700] Ignoring unknown config key: terminal_select_modifiers
+RANDR Query Version returned error -1
+xsetroot:  unable to open display ':1'
+RANDR Query Version returned error -1
+xsetroot:  unable to open display ':1'
+
+
+
+Sun Jun 12 13:24:42 CEST 2022 started the wallapper script 
+
+
+
+
+
+Sun Jun 12 13:24:42 CEST 2022 started the kitty terminal window 
+
+
+
+
+
+bash: /home/twfl/Scripts/bar/dwm_bar.sh: No such file or directory
+Sun Jun 12 13:24:42 CEST 2022 started the dwm_bar script 
+
+
+
+
+
+Sun Jun 12 13:24:42 CEST 2022 started the audio server 
+
+
+
+
+
+Sun Jun 12 13:24:42 CEST 2022 started the browser 
+
+
+[W][00042.613345] mod.rt       | [     module-rt.c:  259 translate_error()] RTKit error: org.freedesktop.DBus.Error.Failed
+[W][00042.613399] mod.rt       | [     module-rt.c:  578 set_nice()] could not set nice-level to -11: I/O error
+[W][00042.618641] mod.rt       | [     module-rt.c:  259 translate_error()] RTKit error: org.freedesktop.DBus.Error.Failed
+[W][00042.618687] mod.rt       | [     module-rt.c:  578 set_nice()] could not set nice-level to -11: I/O error
+[W][00044.894538] mod.rt       | [     module-rt.c:  259 translate_error()] RTKit error: org.freedesktop.DBus.Error.Failed
+[W][00044.894551] mod.rt       | [     module-rt.c:  800 impl_acquire_rt()] could not make thread 1275 realtime using RTKit: I/O error
+[W][00047.937588] mod.rt       | [     module-rt.c:  259 translate_error()] RTKit error: org.freedesktop.DBus.Error.Failed
+[W][00047.937604] mod.rt       | [     module-rt.c:  800 impl_acquire_rt()] could not make thread 1278 realtime using RTKit: I/O error
+[163 13:24:48.465465] Ignoring unknown config key: open_url_modifiers
+[163 13:24:48.465743] Ignoring unknown config key: rectangle_select_modifiers
+[163 13:24:48.465799] Ignoring unknown config key: terminal_select_modifiers
+536870912
+[W][00048.113338] mod.rt       | [     module-rt.c:  259 translate_error()] RTKit error: org.freedesktop.DBus.Error.Failed
+[W][00048.113353] mod.rt       | [     module-rt.c:  800 impl_acquire_rt()] could not make thread 1279 realtime using RTKit: I/O error
