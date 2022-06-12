@@ -10,6 +10,7 @@ echo -e "$(date) started the dwm_bar script \n\n" &
 
 # Start audio servers
 (
+sleep 2
 echo -e "\n\n"
 (pipewire) &
 (pipewire-pulse) &
@@ -19,6 +20,7 @@ echo -e "$(date) started the audio server \n\n" &
 
 # Set a wallaper
 (
+sleep 2
 echo -e "\n\n"
 bash /home/twfl/Scripts/wallpaper-switcher.sh &
 echo -e "$(date) started the wallapper script \n\n" &
@@ -27,6 +29,7 @@ echo -e "$(date) started the wallapper script \n\n" &
 
 # Open the kitty terminal
 (
+sleep 2
 echo -e "\n\n"
 kitty -1 -T="Hey, Hi, Hello" --wait-for-single-instance-window-close -d=/home/twfl/ bash /home/twfl/Scripts/welcomelol.sh &
 echo -e "$(date) started the kitty terminal window \n\n" &
@@ -35,6 +38,6 @@ echo -e "$(date) started the kitty terminal window \n\n" &
 # Open Browser
 (
 echo -e "\n\n"
-(ungoogled-chromium &> /dev/null) &
+ungoogled-chromium &
 echo -e "$(date) started the browser \n\n" &
 ) 2>&1 | tee -a $LOGDIR/scripts.log &
