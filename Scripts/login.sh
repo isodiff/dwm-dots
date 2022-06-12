@@ -1,5 +1,13 @@
 #!/bin/bash
 LOGDIR=$HOME"/Scripts/logs"
+
+# Dwm bar xsetroot
+(
+echo -e "\n\n"
+bash /home/twfl/Scripts/dwm-bar/dwm_bar.sh &
+echo -e "$(date) started the dwm_bar script \n\n" &
+) 2>&1 | tee -a $LOGDIR/scripts.log &
+
 # Start audio servers
 (
 echo -e "\n\n"
@@ -16,12 +24,6 @@ bash /home/twfl/Scripts/wallpaper-switcher.sh &
 echo -e "$(date) started the wallapper script \n\n" &
 ) 2>&1 | tee -a $LOGDIR/scripts.log &
 
-# Dwm bar xsetroot
-(
-echo -e "\n\n"
-bash /home/twfl/Scripts/bar/dwm_bar.sh &
-echo -e "$(date) started the dwm_bar script \n\n" &
-) 2>&1 | tee -a $LOGDIR/scripts.log &
 
 # Open the kitty terminal
 (
