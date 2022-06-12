@@ -1,1 +1,1 @@
-# endeavouros-dots
+# dwm-dots
