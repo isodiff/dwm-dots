@@ -99,12 +99,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias pm="sudo pacman -Sy"
-alias update="sudo pacman -Syu"
-alias updatef="yay -Syyuu"
+alias pm="sudo xbps-install -S "
+alias update="sudo xbps-install -Su && sudo xbps-install -Su"
 alias b="cd .."
 alias v="nvim"
-alias sv="sudo nvim"
+alias suv="sudo nvim"
 alias please="sudo"
-neofetch
-uname -srm
+rxfetch
