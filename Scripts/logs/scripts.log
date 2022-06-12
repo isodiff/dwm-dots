@@ -96,3 +96,6 @@ Sun Jun 12 13:24:42 CEST 2022 started the browser
 536870912
 [W][00048.113338] mod.rt       | [     module-rt.c:  259 translate_error()] RTKit error: org.freedesktop.DBus.Error.Failed
 [W][00048.113353] mod.rt       | [     module-rt.c:  800 impl_acquire_rt()] could not make thread 1279 realtime using RTKit: I/O error
+feh WARNING: /home/twfl/Pictures/* does not exist - skipping
+feh: No loadable images specified.
+See 'feh --help' or 'man feh' for detailed usage information
