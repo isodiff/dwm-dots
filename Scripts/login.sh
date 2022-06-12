@@ -1,33 +1,38 @@
 #!/bin/bash
-
+LOGDIR=$HOME"/Scripts/logs"
 # Start audio servers
 (
-pipewire &
-pipewire-pulse &
-echo -e "$(date) started the audio server"
-) 2>&1 | tee -a scripts.log
+echo -e "\n\n"
+(pipewire) &
+(pipewire-pulse) &
+echo -e "$(date) started the audio server \n\n" &
+) 2>&1 | tee -a $LOGDIR/scripts.log &
 
 
 # Set a wallaper
 (
+echo -e "\n\n"
 bash /home/twfl/Scripts/wallpaper-switcher.sh &
-echo -e "$(date) started the wallapper script"
-) 2>&1 | tee -a scripts.log
+echo -e "$(date) started the wallapper script \n\n" &
+) 2>&1 | tee -a $LOGDIR/scripts.log &
 
 # Dwm bar xsetroot
 (
+echo -e "\n\n"
 bash /home/twfl/Scripts/bar/dwm_bar.sh &
-echo -e "$(date) started the dwm_bar script"
-) 2>&1 | tee -a scripts.log
+echo -e "$(date) started the dwm_bar script \n\n" &
+) 2>&1 | tee -a $LOGDIR/scripts.log &
 
 # Open the kitty terminal
 (
+echo -e "\n\n"
 kitty -1 -T="Hey, Hi, Hello" --wait-for-single-instance-window-close -d=/home/twfl/ bash /home/twfl/Scripts/welcomelol.sh &
-echo -e "$(date) started the kitty terminal window"
-) 2>&1 | tee -a scripts.log
+echo -e "$(date) started the kitty terminal window \n\n" &
+) 2>&1 | tee -a $LOGDIR/scripts.log &
 
 # Open Browser
-ungoogled-chromium &
 (
-echo -e "$(date) started the browser"
-) 2>&1 | tee -a scripts.log
+echo -e "\n\n"
+(ungoogled-chromium &> /dev/null) &
+echo -e "$(date) started the browser \n\n" &
+) 2>&1 | tee -a $LOGDIR/scripts.log &
