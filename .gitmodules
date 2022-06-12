@@ -1,0 +1,3 @@
+[submodule "rxfetch-script"]
+	path = rxfetch-script
+	url = https://github.com/isodiff/rxfetch-script.git
