@@ -17,6 +17,14 @@ echo -e "\n\n"
 echo -e "$(date) started the audio server \n\n" &
 ) 2>&1 | tee -a $LOGDIR/scripts.log &
 
+# Playerctl deamon for music status
+(
+echo -e "\n\n"
+playerctld daemon
+echo -e "$(date) started the playerctl daemon \n\n" &
+) 2>&1 | tee -a $LOGDIR/scripts.log &
+
+
 
 # Set a wallaper
 (
@@ -37,6 +45,7 @@ echo -e "$(date) started the kitty terminal window \n\n" &
 
 # Open Browser
 (
+sleep 2
 echo -e "\n\n"
 ungoogled-chromium &
 echo -e "$(date) started the browser \n\n" &
