@@ -5,5 +5,5 @@
 	path = dwm
 	url = https://github.com/isodiff/dwm.git
 [submodule "dwm-bar"]
-	path = dwm-bar
+	path = Scripts/dwm-bar/
 	url = https://github.com/isodiff/dwm-bar.git
