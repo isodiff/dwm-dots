@@ -1,9 +1,12 @@
 [submodule "rxfetch-script"]
 	path = rxfetch-script
-	url = https://github.com/isodiff/rxfetch-script.git
+  url = https://github.com/isodiff/rxfetch-script.git
+  branch = main
 [submodule "dwm"]
 	path = dwm
 	url = https://github.com/isodiff/dwm.git
+	branch = main
 [submodule "dwm-bar"]
 	path = Scripts/dwm-bar/
-	url = https://github.com/isodiff/dwm-bar.git
+  url = https://github.com/isodiff/dwm-bar.git
+  branch = main
