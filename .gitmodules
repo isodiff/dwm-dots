@@ -6,3 +6,6 @@
 	path = dwm
 	url = https://github.com/isodiff/dwm.git
 	branch = main
+[submodule "Scripts/dwm-bar"]
+	path = Scripts/dwm-bar
+	url = https://github.com/isodiff/dwm-bar.git
