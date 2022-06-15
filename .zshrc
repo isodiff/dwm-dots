@@ -104,5 +104,6 @@ alias update="sudo xbps-install -Su && sudo xbps-install -Su"
 alias b="cd .."
 alias v="nvim"
 alias suv="sudo nvim"
+alias wifi="sudo nmtui-connect"
 alias please="sudo"
 rxfetch

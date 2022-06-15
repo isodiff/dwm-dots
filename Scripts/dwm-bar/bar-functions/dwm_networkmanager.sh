@@ -9,9 +9,9 @@ dwm_networkmanager () {
     PUBLIC=$(curl -s https://ipinfo.io/ip)
 
     if [ "$IDENTIFIER" = "unicode" ]; then
-        export __DWM_BAR_NETWORKMANAGER__="${SEP1}󰖩 ${CONNAME} ${SEP2}"
+      export __DWM_BAR_NETWORKMANAGER__="^b#303446^${SEP1} ^c#f2d5cf^󰖩 ${CONNAME} ${SEP2}^d^"
     else
-        export __DWM_BAR_NETWORKMANAGER__="${SEP1}NET ${CONNAME} ${PRIVATE} ${PUBLIC}${SEP2}"
+      export __DWM_BAR_NETWORKMANAGER__="$SEP1NET $CONNAME $PRIVATE $PUBLIC$SEP2"
     fi
 }
 

@@ -16,7 +16,7 @@ dwm_loadavg () {
 
     printf "%s" "$SEP1"
     if [ "$IDENTIFIER" = "unicode" ]; then
-        printf "󰌢 %s" "$LOAD_AVG"
+        printf " ^c#f4b8e4^󰌢 %s^d^ " "$LOAD_AVG"
     else
         printf "AVG %s" "$LOAD_AVG"
     fi
