@@ -8,13 +8,13 @@ wait
 echo -e "$(date) kitty terminal window stopped\n\n"
 ) &
 
-## power manager
-(
-xfce4-power-manager &
-echo -e "$(date) started the power manager \n\n"
-wait
-echo -e "$(date) power manager stopped\n\n"
-) &
+### power manager
+#(
+#xfce4-power-manager &
+#echo -e "$(date) started the power manager \n\n"
+#wait
+#echo -e "$(date) power manager stopped\n\n"
+#) &
 
 ## wallpaper & xsetroot dwm bar
 (
