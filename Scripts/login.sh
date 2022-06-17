@@ -37,14 +37,15 @@ wait
 echo -e "$(date) audio servers and daemons stopped \n\n"
 ) &
 
-wait
-
 ## kdeconnect connection to android
 (
+sleep 2
 kdeconnect-indicator &
-kdeconnect-cli --refresh -l &
-wait
-kdeconnect-cli -d "2a8dc3a0d999f67f" --ping-msg="Asus Void is now online\!" &
+sleep 1
+kdeconnect-cli --refresh
+kdeconnect-cli -l
+kdeconnect-cli -a
+kdeconnect-cli -d "2a8dc3a0d999f67f" --ping-msg="Asus Void is now online!"
 echo -e "$(date) started the kdeconnect system \n\n"
 wait
 echo -e "$(date) kdeconnect system stopped \n\n"
