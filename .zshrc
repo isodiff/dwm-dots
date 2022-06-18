@@ -106,4 +106,6 @@ alias v="nvim"
 alias suv="sudo nvim"
 alias wifi="sudo nmtui-connect"
 alias please="sudo"
+alias img="kitty +kitten icat"
 rxfetch
+export PATH=$PATH:/home/twfl/Sources/browser-mpris2/native/chrome-mpris2
