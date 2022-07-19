@@ -1,3 +1,6 @@
+## Support me!
+monero: 45xJFnyEE3CUa8Lyab5dZFDoB6NwLkkeeZTCdXGtApmb9TKFgJahj1qf9UUU3MBMjtYaa2QrSSJSTKYBM2ZJ9Ze7TGH7Enz
+
 # dwm-dots
 
 Dotfiles, bash scripts and some config files I use on my old void-GNU/linux laptop. The configuration follows the [Catppuccin Frappe theme](https://github.com/catppuccin/catppuccin#-palettes). This is still WIP.
